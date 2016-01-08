@@ -6,6 +6,7 @@ $.fn.auto = function() {
     $(this).html(''); // 清空预设文本
 
     var timer = setInterval(function() {
+
         var current = str.substr(index, 1);
         if (current == '<') {
             index = str.indexOf('>', index) + 1;
@@ -13,8 +14,15 @@ $.fn.auto = function() {
             index++;
         }
         target.html(str.substring(0, index) + '_');
+
+        var lastOne = document.getElementById("autoTarget");
+        lastOne.scrollIntoView(true); // 页面追随某元素定时滚动
+
         if (index >= str.length) clearInterval(timer);
     }, 100);
 };
 
 $("#auto").auto();
+
+
+
