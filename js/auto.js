@@ -13,7 +13,7 @@ $.fn.auto = function() {
         } else {
             index++;
         }
-        target.html(str.substring(0, index) + '_');
+        target.html(str.substring(0, index));
 
         var lastOne = document.getElementById("autoTarget");
         lastOne.scrollIntoView(true); // 页面追随某元素定时滚动

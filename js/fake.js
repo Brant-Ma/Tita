@@ -10,7 +10,7 @@ $.fn.fake = function() {
   	} else {
     	index++;
   	}
-	target.html(str.substr(0, index) + '_');
+	target.html(str.substr(0, index));
 };
  
 document.onkeydown = function() { 
